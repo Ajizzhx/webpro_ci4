@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1746431658;_ci_previous_url|s:49:"http://localhost:8080/index.php/admin/login-admin";idUpdateBuku|s:6:"BKU001";idUpdate|s:6:"ADM001";error|s:22:"Password Tidak Sesuai!";__ci_vars|a:2:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:2:{s:8:"username";s:4:"aziz";s:8:"password";s:9:"developer";}}
