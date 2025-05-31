@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Master Data Anggota
-                    <a href="<?= base_url('admin/input-anggota'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Anggota</a>
+                    <a href="<?= base_url('anggota/input-data-anggota'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Anggota</a>
                 </div>
                 <div class="panel-body">
                     <?php
@@ -40,26 +40,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php $no = 1; foreach ($dataAnggota as $anggota) : // Sesuaikan nama variabel dengan yang dikirim controller ?>
+                            <?php $no = 1; foreach ($data_user as $anggota) : // Ganti nama variabel $data_user ?>
                                 <tr>
-                                <td><?= $no++; ?></td>
+                                    <td><?= $no++; ?></td>
                                     <td><?= esc($anggota['id_anggota']); ?></td>
                                     <td><?= esc($anggota['nama_anggota']); ?></td>
-                                    <td>
-                                        <?php 
-                                            if ($anggota['jenis_kelamin'] == 'L') echo 'Laki-laki';
-                                            elseif ($anggota['jenis_kelamin'] == 'P') echo 'Perempuan';
-                                            else echo '-'; // Atau tampilkan strip jika nilainya tidak L atau P
-                                        ?>
-                                    </td>
+                                    <td><?= esc($anggota['jenis_kelamin']); ?></td>
                                     <td><?= esc($anggota['no_tlp']); ?></td>
                                     <td><?= esc($anggota['alamat']); ?></td>
                                     <td><?= esc($anggota['email']); ?></td>
                                     <td>
-                                    <a href="<?= base_url('admin/edit-anggota/' . sha1($anggota['id_anggota'])); ?>" class="btn btn-warning btn-xs" title="Edit">
+                                        <a href="<?= base_url('anggota/edit-data-anggota/' . sha1($anggota['id_anggota'])); ?>" class="btn btn-warning btn-xs" title="Edit">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('admin/hapus-anggota/' . sha1($anggota['id_anggota'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
+                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('anggota/hapus-data-anggota/' . sha1($anggota['id_anggota'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>

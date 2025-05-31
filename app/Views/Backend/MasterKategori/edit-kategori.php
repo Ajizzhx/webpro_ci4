@@ -3,7 +3,7 @@
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin/dashboard-admin'); ?>"><span class="glyphicon glyphicon-home"></span></a></li>
             <li>Master Data</li>
-            <li><a href="<?= base_url('admin/master-kategori'); ?>">Data Kategori</a></li>
+            <li><a href="<?= base_url('kategori/master-data-kategori'); ?>">Data Kategori</a></li>
             <li class="active">Edit Data Kategori</li>
         </ol>
     </div><!--/.row-->
@@ -23,7 +23,7 @@
                         echo '<div class="alert alert-danger">' . esc($error) . '</div>';
                     }
                     ?>
-                    <form class="form-horizontal" action="<?= base_url('admin/update-kategori'); ?>" method="post">
+                    <form class="form-horizontal" action="<?= base_url('kategori/update-data-kategori'); ?>" method="post">
                         <fieldset>
                             <!-- ID Kategori (Readonly) -->
                             <div class="form-group">
@@ -45,7 +45,7 @@
                             <div class="form-group">
                                 <div class="col-md-12 widget-right">
                                     <button type="submit" class="btn btn-primary btn-md pull-right">Update</button>
-                                    <a href="<?= base_url('admin/master-kategori'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
+                                    <a href="<?= base_url('kategori/master-data-kategori'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
                                 </div>
                             </div>
                         </fieldset>

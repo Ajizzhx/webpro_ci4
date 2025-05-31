@@ -3,7 +3,7 @@
         <ol class="breadcrumb">
             <li><a href="<?= base_url('admin/dashboard-admin'); ?>"><span class="glyphicon glyphicon-home"></span></a></li>
             <li>Master Data</li>
-            <li><a href="<?= base_url('admin/master-anggota'); ?>">Data Anggota</a></li>
+            <li><a href="<?= base_url('anggota/master-data-anggota'); ?>">Data Anggota</a></li>
             <li class="active">Edit Data Anggota</li>
         </ol>
     </div><!--/.row-->
@@ -23,7 +23,7 @@
                         echo '<div class="alert alert-danger">' . esc($error) . '</div>';
                     }
                     ?>
-                    <form class="form-horizontal" action="<?= base_url('admin/update-anggota'); ?>" method="post">
+                    <form class="form-horizontal" action="<?= base_url('anggota/update-data-anggota'); ?>" method="post">
                         <fieldset>
                             <!-- ID Anggota (Readonly) -->
                             <div class="form-group">
@@ -47,8 +47,8 @@
                                 <div class="col-md-9">
                                     <select id="jenis_kelamin" name="jenis_kelamin" class="form-control" required>
                                         <option value="">-- Pilih Jenis Kelamin --</option>
-                                        <option value="Laki-laki" <?= ($data_anggota['jenis_kelamin'] == 'L') ? 'selected' : ''; ?>>Laki-laki</option>
-                                        <option value="Perempuan" <?= ($data_anggota['jenis_kelamin'] == 'P') ? 'selected' : ''; ?>>Perempuan</option>
+                                        <option value="Laki-laki" <?= ($data_anggota['jenis_kelamin'] == 'Laki-laki') ? 'selected' : ''; ?>>Laki-laki</option>
+                                        <option value="Perempuan" <?= ($data_anggota['jenis_kelamin'] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
                                     </select>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <div class="col-md-12 widget-right">
                                     <button type="submit" class="btn btn-primary btn-md pull-right">Update</button>
-                                    <a href="<?= base_url('admin/master-anggota'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
+                                    <a href="<?= base_url('anggota/master-data-anggota'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
                                 </div>
                             </div>
                         </fieldset>

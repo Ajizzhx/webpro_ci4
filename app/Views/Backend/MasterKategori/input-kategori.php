@@ -26,7 +26,7 @@
                         echo '<div class="alert alert-success">' . esc($success) . '</div>';
                     }
                     ?>
-                    <form class="form-horizontal" action="<?= base_url('admin/simpan-kategori'); ?>" method="post">
+                    <form class="form-horizontal" action="<?= base_url('kategori/simpan-data-kategori'); ?>" method="post">
                         <fieldset>
                             <!-- Nama Kategori input-->
                             <div class="form-group">
@@ -40,7 +40,7 @@
                             <div class="form-group">
                                 <div class="col-md-12 widget-right">
                                     <button type="submit" class="btn btn-primary btn-md pull-right">Simpan</button>
-                                    <a href="<?= base_url('admin/master-kategori'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
+                                    <a href="<?= base_url('kategori/master-data-kategori'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
                                 </div>
                             </div>
                         </fieldset>

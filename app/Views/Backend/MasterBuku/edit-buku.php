@@ -128,28 +128,28 @@
 
                             <!-- Cover Buku input (Opsional saat edit) -->
                             <div class="form-group">
-                                <label class="col-md-3 control-label" for="cover_buku">Cover Buku</label>
+                                <label class="col-md-3 control-label" for="cover_buku">Ganti Cover Buku</label>
                                 <div class="col-md-9">
-                                    <?php if (!empty($data_buku['cover_buku'])) : ?>
-                                        <img src="<?= base_url('Assets/CoverBuku/' . esc($data_buku['cover_buku'])); ?>" alt="Cover Buku" style="max-width: 500px; margin-bottom: 10px; border: 1px solid #ddd; padding: 2px;">
-                                    <?php endif; ?>
                                     <input id="cover_buku" name="cover_buku" type="file" class="form-control" accept="image/jpeg, image/png, image/jpg">
                                     <span class="help-block">Kosongkan jika tidak ingin mengganti cover. Format: JPG, JPEG, PNG. Maks: 1MB</span>
+                                    <?php if (!empty($data_buku['cover_buku'])) : ?>
+                                        <p style="margin-top: 5px;">Cover saat ini: <a href="<?= base_url('Assets/CoverBuku/' . esc($data_buku['cover_buku'])); ?>" target="_blank"><?= esc($data_buku['cover_buku']); ?></a></p>
+                                        <img src="<?= base_url('Assets/CoverBuku/' . esc($data_buku['cover_buku'])); ?>" alt="Cover Buku" style="max-width: 100px; max-height: 150px; margin-top: 5px; border: 1px solid #ddd; padding: 2px;">
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
                             <!-- E-Book input (Opsional saat edit) -->
                             <div class="form-group">
-                                <label class="col-md-3 control-label" for="e_book">E-Book (PDF)</label>
+                                <label class="col-md-3 control-label" for="e_book">Ganti File E-Book (PDF)</label>
                                 <div class="col-md-9">
-                                    <?php if (!empty($data_buku['e_book'])) : ?>
-                                        <iframe src="<?= base_url('Assets/E-Book/' . esc($data_buku['e_book'])); ?>" width="100%" height="400px" style="border:1px solid #ccc;"></iframe>
-                                    <?php endif; ?>
                                     <input id="e_book" name="e_book" type="file" class="form-control" accept="application/pdf">
-                                    <span class="help-block">Kosongkan jika tidak ingin mengganti E-Book. Format: PDF. Maks: 10MB</span>
+                                     <span class="help-block">Kosongkan jika tidak ingin mengganti E-Book. Format: PDF. Maks: 10MB</span>
+                                     <?php if (!empty($data_buku['e_book'])) : ?>
+                                        <p style="margin-top: 5px;">E-Book saat ini: <a href="<?= base_url('Assets/E-Book/' . esc($data_buku['e_book'])); ?>" target="_blank"><?= esc($data_buku['e_book']); ?></a></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-
 
                             <!-- Form actions -->
                             <div class="form-group">

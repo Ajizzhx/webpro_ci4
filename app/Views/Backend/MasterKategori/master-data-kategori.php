@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Master Data Kategori
-                    <a href="<?= base_url('admin/input-kategori'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Kategori</a>
+                    <a href="<?= base_url('kategori/input-data-kategori'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Kategori</a>
                 </div>
                 <div class="panel-body">
                     <?php
@@ -36,16 +36,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no = 1; foreach ($dataKategori as $kategori) : ?>
+                            <?php $no = 1; foreach ($data_kategori as $kategori) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
                                     <td><?= esc($kategori['id_kategori']); ?></td>
                                     <td><?= esc($kategori['nama_kategori']); ?></td>
                                     <td>
-                                        <a href="<?= base_url('admin/edit-kategori/' . sha1($kategori['id_kategori'])); ?>" class="btn btn-warning btn-xs" title="Edit">
+                                        <a href="<?= base_url('kategori/edit-data-kategori/' . sha1($kategori['id_kategori'])); ?>" class="btn btn-warning btn-xs" title="Edit">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('admin/hapus-kategori/' . sha1($kategori['id_kategori'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
+                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('kategori/hapus-data-kategori/' . sha1($kategori['id_kategori'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>

@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Master Data Rak
-                    <a href="<?= base_url('admin/input-rak'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Rak</a>
+                    <a href="<?= base_url('rak/input-data-rak'); ?>" class="btn btn-primary btn-sm pull-right">Tambah Rak</a>
                 </div>
                 <div class="panel-body">
                     <?php
@@ -36,16 +36,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no = 1; foreach ($dataRak as $rak) : ?>
+                            <?php $no = 1; foreach ($data_rak as $rak) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
                                     <td><?= esc($rak['id_rak']); ?></td>
                                     <td><?= esc($rak['nama_rak']); ?></td>
                                     <td>
-                                        <a href="<?= base_url('admin/edit-rak/' . sha1($rak['id_rak'])); ?>" class="btn btn-warning btn-xs" title="Edit">
+                                        <a href="<?= base_url('rak/edit-data-rak/' . sha1($rak['id_rak'])); ?>" class="btn btn-warning btn-xs" title="Edit">
                                             <span class="glyphicon glyphicon-edit"></span>
                                         </a>
-                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('admin/hapus-rak/' . sha1($rak['id_rak'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
+                                        <a href="#" onclick="konfirmasiHapus('<?= base_url('rak/hapus-data-rak/' . sha1($rak['id_rak'])); ?>')" class="btn btn-danger btn-xs" title="Hapus">
                                             <span class="glyphicon glyphicon-trash"></span>
                                         </a>
                                     </td>

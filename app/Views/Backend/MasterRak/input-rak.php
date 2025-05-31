@@ -26,7 +26,7 @@
                         echo '<div class="alert alert-success">' . esc($success) . '</div>';
                     }
                     ?>
-                    <form class="form-horizontal" action="<?= base_url('admin/simpan-rak'); ?>" method="post">
+                    <form class="form-horizontal" action="<?= base_url('rak/simpan-data-rak'); ?>" method="post">
                         <fieldset>
                             <!-- Nama Rak input-->
                             <div class="form-group">
@@ -40,7 +40,7 @@
                             <div class="form-group">
                                 <div class="col-md-12 widget-right">
                                     <button type="submit" class="btn btn-primary btn-md pull-right">Simpan</button>
-                                    <a href="<?= base_url('admin/master-rak'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
+                                    <a href="<?= base_url('rak/master-data-rak'); ?>" class="btn btn-danger btn-md pull-right" style="margin-right: 10px;">Batal</a>
                                 </div>
                             </div>
                         </fieldset>
