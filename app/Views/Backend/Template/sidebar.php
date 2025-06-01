@@ -31,7 +31,7 @@
 			</a>
 			<ul class="children collapse" id="sub-item-transaksi">
 				<li><a href="<?= base_url('anggota/data-peminjaman'); ?>"><span class="glyphicon glyphicon-list-alt"></span> Data Peminjaman</a></li>
-				<li><a href="<?= base_url('anggota/form-peminjaman'); ?>"><span class="glyphicon glyphicon-plus-sign"></span> Transaksi Peminjaman</a></li>
+
 			</ul>
 		</li>
 		<li role="presentation" class="divider"></li>
